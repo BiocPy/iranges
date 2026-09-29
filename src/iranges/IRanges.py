@@ -804,6 +804,14 @@ class IRanges(ut.BiocObject):
 
         return result
 
+    def __xtfrm__(self) -> list:
+        """Get the transform representation for ordering/sorting.
+
+        Returns:
+            A list of start-width tuples.
+        """
+        return [(int(s), int(w)) for s, w in zip(self._start, self._width)]
+
     def order(self, decreasing: bool = False) -> np.ndarray:
         """Get the order of indices for sorting.
 
