@@ -58,7 +58,6 @@ print(x)
 `IRanges` supports most interval based operations. For example to compute gaps
 
 ```python
-
 x = IRanges([-2, 6, 9, -4, 1, 0, -6, 10], [5, 0, 6, 1, 4, 3, 2, 3])
 
 gaps = x.gaps()
